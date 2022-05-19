@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+{% block content %}
+
+<head>
+	<meta charset="utf-8">
+    <title>Название страницы</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+
+<body>
+	<div class="workspace">
+		<div class="upbar">
+			<img class="logo left" src="{% static 'css/logo.png' %}">
+			<ul class="left">
+				<li class="right li">
+					<a class="upbartext scuare">СПРАВКА</a>
+				</li>
+			</ul>
+			<ul class="right username">
+				<li class="right li">
+					<a class="upbartext scuare">{{ user.username }}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pages">
+			<ul class="left">
+				<li class="left li">
+					<a class="listtext primary-color chip" href="#">
+						Работы в процессе
+					</a>
+				</li>
+				<li class="left li">
+					<a class="listtext other-color chip" href="{% url 'lk_student_sent' %}">
+						Результаты работ
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<div class="works center">
+
+			{% if not l1 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+
+    						<form action="save_1/" method="POST" class="post-form">{% csrf_token %}
+
+									<button type="submit" class="action acttext">Отправить работу</button>
+
+    						</form>
+						</li>
+						<li class="right li colgray">
+							<a class="action acttext">
+								Редактировать работу
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №1 "Тема лабораторной работы Такая-то такая-то" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+					
+				</div>
+			</div>
+
+			{% endif %}
+
+
+			{% if not l2 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+    						<form action="save_2/" method="POST" class="post-form">{% csrf_token %}
+
+									<button type="submit" class="action acttext">Отправить работу</button>
+
+    						</form>
+
+						</li>
+						<li class="right li colgray">
+							<a class="action acttext">
+								Редактировать работу
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №2 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+					
+				</div>
+				
+			</div>
+
+			{% endif %}
+
+			{% if not l3 %}
+			
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+
+    						<form action="save_3/" method="POST" class="post-form">{% csrf_token %}
+
+									<button type="submit" class="action acttext">Отправить работу</button>
+
+    						</form>
+						</li>
+						<li class="right li colgray">
+							<a class="action acttext">
+								Редактировать работу
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №3 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+					
+				</div>
+				
+			</div>
+
+			{% endif %}
+
+
+
+			{% if not l4 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+
+    						<form action="save_4/" method="POST" class="post-form">{% csrf_token %}
+									<button type="submit" class="action acttext">Отправить работу</button>
+
+    						</form>
+						</li>
+						<li class="right li colgray">
+							<a class="action acttext">
+								Редактировать работу
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №4 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+
+			{% if not l5 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+
+    						<form action="save_5/" method="POST" class="post-form">{% csrf_token %}
+
+									<button type="submit" class="action acttext">Отправить работу</button>
+
+    						</form>
+						</li>
+						<li class="right li colgray">
+							<a class="action acttext">
+								Редактировать работу
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №5 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+
+			
+		</div>
+	</div>
+</body>
+{% endblock %}
+</html>

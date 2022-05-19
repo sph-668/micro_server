@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+
+<head>
+	<meta charset="utf-8">
+    <title>Название страницы</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+	<div class="workspace">
+		<div class="upbar">
+			<img class="logo left" src="{% static 'css/logo.png' %}">
+			<ul class="left">
+				<li class="right li">
+					<a class="upbartext scuare">СПРАВКА</a>
+				</li>
+			</ul>
+			<ul class="right username">
+				<li class="right li">
+					<a class="upbartext scuare">{{ user.username }}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pages">
+			<ul class="left">
+				<li class="left li">
+					<a class="listtext other-color chip" href="{% url 'lk_student_active' %}">
+						Работы в процессе
+					</a>
+				</li>
+				<li class="left li">
+					<a class="listtext primary-color chip" href="#">
+						Результаты работ
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="works center">
+
+
+
+			{% if l1 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+							<a class="action acttext">
+								{% if sc1 %}
+								{{ sc1 }}
+								{% else %}
+								Работа на проверке
+								{% endif %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №1 "Тема лабораторной работы Такая-то такая-то" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+			</div>
+
+			{% endif %}
+
+
+			{% if l2 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+							<a class="action acttext">
+								{% if sc2 %}
+								{{ sc2 }}
+								{% else %}
+								Работа на проверке
+								{% endif %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №2 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+			{% if l3 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+							<a class="action acttext">
+								{% if sc3 %}
+								{{ sc3 }}
+								{% else %}
+								Работа на проверке
+								{% endif %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №3 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+
+
+			{% if l4 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+							<a class="action acttext">
+								{% if sc4 %}
+								{{ sc4 }}
+								{% else %}
+								Работа на проверке
+								{% endif %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №4 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+
+			{% if l5 %}
+
+			<div class="task">
+				<div class="right options">
+					<ul padding-left=20px>
+						<li class="right li colgray">
+							<a class="action acttext">
+								{% if sc5 %}
+								{{ sc5 }}
+								{% else %}
+								Работа на проверке
+								{% endif %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="workname">
+					<h3> Лабораторная работа №5 "Тема лабораторной работы" </h3>
+					<p> </p>
+					<p> <em>Описание работы</em> </p>
+					<p class="deadline"> <em>[Срок выполнени работы]</em> </p>
+
+				</div>
+
+			</div>
+
+			{% endif %}
+
+
+
+
+
+		</div>
+	</div>
+</body>
+
+</html>
