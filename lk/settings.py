@@ -122,3 +122,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = 'lk_student_active'
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
