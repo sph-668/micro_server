@@ -6,8 +6,7 @@ from django.contrib.auth.models import User
 
 class Presaved_labs(models.Model):
     number = models.IntegerField()
-    author = models.CharField(max_length=30, default = 'Вася')
-    group = models.CharField(max_length=15)
+    user_id = models.IntegerField()
     created_date = models.DateTimeField(default=timezone.now)
     brightness = models.FloatField()
     contrast = models.FloatField()
@@ -22,8 +21,7 @@ class Presaved_labs(models.Model):
 
 class Saved_labs(models.Model):
     number = models.IntegerField()
-    author = models.CharField(max_length=30, default = 'Вася')
-    group = models.CharField(max_length=15)
+    user_id = models.IntegerField(default = 0)
     created_date = models.DateTimeField(default=timezone.now)
     brightness = models.FloatField()
     contrast = models.FloatField()
@@ -40,7 +38,15 @@ class Saved_labs(models.Model):
 class Lab_description(models.Model):
     number = models.IntegerField()
     deadline = models.CharField(max_length=20)
-    task = models.CharField(max_length=300)
+    title = models.CharField(max_length=300, default="заголовок")
+    task = models.CharField(max_length=1500)
+
+
+
+
+# class User_Token(models.Model):
+#     username = models.CharField(max_length=300)
+#     token = models.CharField(max_length=40)
 
 
 

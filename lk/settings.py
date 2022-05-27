@@ -25,7 +25,14 @@ SECRET_KEY = '6)@6)x(r86o)#+e5tespqlhx-nir()w#4(s4*lv96u&u8*qf9c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['192.168.0.17', 'micro.ru', '127.0.0.1', '10.241.77.151'] #сменить адрес на сервер
+
+
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'http://client.micro.ru:3000'
+)
 
 
 # Application definition
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'lk.urls'
@@ -121,6 +130,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-LOGIN_REDIRECT_URL = 'lk_student_active'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+#CORS_ORIGIN_WHITELIST = ('http://localhost:3000', 'http://10.0.123.123:8998', 'http://127.0.0.1:3000', 'http://192.168.0.15:3000')
