@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ['192.168.0.17', 'micro.ru', '127.0.0.1', '10.241.77.151', '.pyt
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'http://client.micro.ru:3000'
+    'http://client.micro.ru:3000',
+    '.pythonanywhere.com',
 )
 
 
