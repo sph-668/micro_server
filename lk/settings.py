@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = '6)@6)x(r86o)#+e5tespqlhx-nir()w#4(s4*lv96u&u8*qf9c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.17', 'micro.ru', '127.0.0.1', '10.241.77.151'] #сменить адрес на сервер
+ALLOWED_HOSTS = ['192.168.0.17', 'micro.ru', '127.0.0.1', '10.241.77.151', '.pythonanywhere.com'] #сменить адрес на сервер
 
 
 
