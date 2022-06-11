@@ -16,9 +16,13 @@ The server has the authorization mechanism which includes checking the entered u
 
 ## Server as a part of complex application
 
-One of the versions of app beeng developed
+One of the versions of app
 
-![6L7t78Aw_AmkHvTMviIWlDOTCajlkU2fR55BO-G_S-btlKaXUa0byVLLprUW8cfBG0tAs4HqipET2Isl_rN1UFsr](https://user-images.githubusercontent.com/68100447/173136548-6ac63657-aefa-4876-b1e8-0788c4ba1c43.jpg)
+![image](https://user-images.githubusercontent.com/68100447/173196556-8cd14b74-85d1-4151-b4c5-16291fa16f6b.png)
+
+![image](https://user-images.githubusercontent.com/68100447/173196615-24629224-edee-4085-a327-c2c330103a18.png)
+
+
 
 ## Project technologies
 
@@ -28,3 +32,27 @@ Server is written on python framework Django, uses the ajax technology to handle
 ## To learn more
 
 Here you may see the prezentation (which includes demonstration) https://prezi.com/view/PU9BxluxFhGGzsnFznVv/
+
+## To learn how that works
+
+You have to clone the code and run the server by
+
+`python manage.py runserver 0.0.0.0:8000`
+
+Then you have to go to 127.0.0.1:8000
+
+If you get the page with 'status: ok',you may pass the json of the following format to check if server is all right:
+
+`let response = await (await fetch('signin/', {
+method: 'POST',
+body: JSON.stringify({username: 'Попов Игорь', password: '1ww3ee', group: 'ПМИ-90'})
+})).json();`
+
+You'll get the unique token for the session. Also you may sign up in the 'application', using the json like 
+
+`let response = await (await fetch('signup/', {
+method: 'POST',
+body: JSON.stringify({username: 'your_name', password: 'your_password', group: 'your_studing_group'})
+})).json();`
+
+The required fields for the json body of the other requests are in the code comments
